@@ -1,0 +1,134 @@
+/* Star animations */
+@keyframes pulse-star {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.9);
+    filter: blur(0.3px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(0.9);
+    filter: blur(0.3px);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes magic-particle-flow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.5);
+  }
+  20% {
+    opacity: 0.4;
+  }
+  60% {
+    transform: translate(var(--tx, -15px), var(--ty, -20px)) scale(1.1);
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx, -30px), var(--ty, -40px)) scale(0.5);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes magic-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Physics animations */
+@keyframes collision-flash {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-rotate-slow {
+    animation: rotate-slow 30s linear infinite;
+  }
+  
+  .animate-magic-fade-in {
+    animation: magic-fade-in 1.2s ease-out forwards;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-star 5s ease-in-out infinite;
+  }
+  
+  .animate-collision {
+    animation: collision-flash 0.3s ease-out;
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+  }
+}
