@@ -8,6 +8,20 @@ export default defineConfig({
   css: {
     postcss: {},
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: [
+            'react',
+            'react-dom',
+          ],
+        },
+      },
+      
+    },
+    
+  },
   resolve: {
     alias: {
       '@': '/src',
