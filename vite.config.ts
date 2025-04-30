@@ -1,30 +1,30 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
-  css: {
-    postcss: {},
+  // Base path - important for Cloudflare Pages
+  base: '/',
+  
+  server: {
+    host: "::",
+    port: 8080,
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: [
-            'react',
-            'react-dom',
-          ],
-        },
-      },
-      
-    },
-    
-  },
+  
+  plugins: [
+    react(),
+  ],
+  
   resolve: {
     alias: {
-      '@': '/src',
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+  
+  // Improve CSS processing
+  css: {
+    postcss: './postcss.config.js',
+    devSourcemap: true,
+  }
+});
