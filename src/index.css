@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -22,13 +24,25 @@ a:hover {
   color: #535bf2;
 }
 
+
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  background: url('/assets/parchment.jpg') repeat;
+  color: #2c1e0f; /* Dark brown */
+  font-family: 'Arial', sans-serif;
   min-width: 320px;
   min-height: 100vh;
+  
 }
+
+h1, h2, h3 {
+  font-family: 'IM Fell English', serif;
+  color: #4b2e0b; /* Slightly darker brown */
+}
+
+
+
 
 h1 {
   font-size: 3.2em;

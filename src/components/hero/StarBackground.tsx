@@ -4,7 +4,7 @@ import { StarProps } from './types/star.types';
 
 const StarBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const starsDataRef = useRef<StarProps[]>([]);
+  const starsDataRef = useRef<StarProps[]>([]); // Explicitly type starsDataRef
   const animationRef = useRef<number>(0);
   const starCount = 220; // Increased for better coverage
 
@@ -118,11 +118,11 @@ const StarBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden z-10">
+    <div className="absolute inset-0 overflow-hidden z-0">
       {/* Canvas for stars */}
       <canvas
         ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-full z-10"
+        className="absolute top-0 left-0 w-full h-full z-0"
       />
     </div>
   );

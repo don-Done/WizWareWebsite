@@ -6,15 +6,18 @@ import HeroContent from './hero/HeroContent';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-wizware-black">
-      {/* Background elements */}
-      <HeroBackground />
-      
-      {/* Physics-enabled stars background */}
-      <StarBackground />
-      
-      {/* Main content */}
-      <HeroContent />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-wizware-black z-0 pt-20">
+        {/* Background elements */}
+        <HeroBackground />     
+        {/* Physics-enabled stars background */}
+        <StarBackground />
+        
+        <HeroContent />
+
+        {/* Distinction line at the bottom of the hero section */}
+        <div className="w-full distinction-line">
+            <div className="gem-placeholder"></div>
+        </div>
     </section>
   );
 };

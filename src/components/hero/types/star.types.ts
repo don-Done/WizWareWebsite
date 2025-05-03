@@ -11,7 +11,7 @@ export interface StarProps {
   };
   opacity: number;
   mass: number;
-  twinkleSpeed?: number;
-  twinklePhase?: number;
-  isCircle?: boolean;
+  twinkleSpeed: number;
+  twinklePhase: number;
+  isCircle: boolean;
 }
