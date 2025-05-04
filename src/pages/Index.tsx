@@ -11,7 +11,7 @@ import ContactSection from '../components/ContactSection';
 const Index = () => {
   return (
 <div className="min-h-screen overflow-x-hidden bg-wizware-black text-white">
-<Header className="" />
+<Header />
 <HeroSection />
 <div className="w-full distinction-line"></div>
 <AboutSection />

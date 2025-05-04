@@ -1,3 +1,8 @@
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
 
 :root {

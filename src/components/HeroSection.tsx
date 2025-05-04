@@ -1,5 +1,4 @@
 
-import React, { useState, useEffect } from 'react';
 import StarBackground from './hero/StarBackground';
 import HeroBackground from './hero/HeroBackground';
 import HeroContent from './hero/HeroContent';

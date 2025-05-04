@@ -59,7 +59,7 @@ export default {
 					'dark-purple': '#5B21B6',
 					teal: '#00CED1',
 					'dark-teal': '#0369A1',
-					black: '#0D0D2B',
+					black: '#050505',
 					'dark-black': '#050505',
 				},
 				sidebar: {

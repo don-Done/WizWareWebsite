@@ -53,7 +53,7 @@ export const createInitialStars = (container: HTMLDivElement | null): HTMLDivEle
   }
   
   // Create new stars - reduced number for less chaos
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 69; i++) {
     const size = Math.random() * 2.5 + 0.5;
     const star = document.createElement('div');
     
@@ -70,7 +70,7 @@ export const createInitialStars = (container: HTMLDivElement | null): HTMLDivEle
     } else {
       star.style.clipPath = 'polygon(50% 0%, 50% 30%, 100% 50%, 50% 70%, 50% 100%, 0% 50%)';
     }
-    star.style.backgroundColor = '#FFD700';
+    star.style.backgroundColor = '#FFD755';
     
     star.style.left = `${Math.random() * 100}vw`;
     star.style.top = `${Math.random() * 100}vh`;
@@ -80,7 +80,7 @@ export const createInitialStars = (container: HTMLDivElement | null): HTMLDivEle
     
     // Add subtle pulsing animation to some stars with longer duration
     if (Math.random() > 0.6) {
-      star.style.animation = `pulse-star ${Math.random() * 4 + 4}s ease-in-out infinite`;
+      star.style.animation = `pulse-star ${Math.random() * 8 + 4}s ease-in-out infinite`;
     }
     
     container.appendChild(star);

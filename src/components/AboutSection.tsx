@@ -1,7 +1,4 @@
-
-import React from 'react';
-import { Wand2, Sparkles, Gamepad2, Users2, BookOpen, Code } from 'lucide-react';
-
+import { Wand2, Sparkles, Gamepad2, Users2, BookOpen } from 'lucide-react';
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-wizware-black to-wizware-dark-black sacred-geometry">
