@@ -13,11 +13,6 @@ const HeroSection = () => {
         <StarBackground />
         
         <HeroContent />
-
-        {/* Distinction line at the bottom of the hero section */}
-        <div className="w-full distinction-line">
-            <div className="gem-placeholder"></div>
-        </div>
     </section>
   );
 };
