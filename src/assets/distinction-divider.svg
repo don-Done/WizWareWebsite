@@ -136,7 +136,7 @@
   <path d="M0,130 L400,130 L500,70 L600,130 L1000,130" stroke="#E9B949" stroke-width="10" fill="none" stroke-linecap="butt" stroke-linejoin="miter" />
   
   <!-- Gem in the center, scaled and positioned -->
-  <g class="gem" transform="translate(440, 40) scale(1.2)">
+  <g class="gem" transform="translate(425, 30) scale(1.44)">
     <!-- Main outer octagon outline -->
     <polygon class="gem-body" points="50,10 73,17 87,37 87,63 73,83 50,90 27,83 13,63 13,37 27,17" />
     

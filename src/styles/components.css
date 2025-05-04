@@ -155,12 +155,14 @@
 }
 
 .distinction-line {
-  height: 100px;
+  height: 0;
+  display: block;
+  width: 100%;
   background: none;
   background-image: url('/src/assets/distinction-divider.svg');
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-    z-index: top;
+  padding-top: 20%;
+  z-index: top;
 }
