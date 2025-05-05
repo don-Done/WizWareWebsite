@@ -3,6 +3,10 @@
     @apply font-cinzel font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-wizware-gold to-wizware-dark-gold;
   }
 
+  .cosmic-button{
+      @apply relative px-6 py-3 overflow-hidden font-medium text-wizware-gold rounded-lg shadow-inner shadow-wizware-gold/20 border border-wizware-gold/20 bg-wizware-dark-black hover:shadow-wizware-gold/40 transition-all duration-300 font-cinzel font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-wizware-gold to-wizware-dark-gold;
+  }
+  
   .wizware-subtitle {
     @apply font-cinzel font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-br from-wizware-teal to-wizware-purple;
   }
@@ -15,11 +19,6 @@
     content: '';
     @apply absolute -inset-0.5 rounded-xl bg-cosmic-gradient opacity-30 blur;
     z-index: -1;
-  }
-
-  .cosmic-button {
-    @apply relative px-6 py-3 overflow-hidden font-medium text-wizware-gold rounded-lg shadow-inner shadow-wizware-gold/20
-    border border-wizware-gold/20 bg-wizware-dark-black hover:shadow-wizware-gold/40 transition-all duration-300;
   }
 
   .cosmic-button::before {
@@ -74,7 +73,8 @@
   }
 
   .cosmic-divider {
-    @apply relative h-12 my-8;
+    @apply relative my-4 h-2;
+  z-index: 10;
   }
 
   .cosmic-divider::before {
@@ -159,11 +159,12 @@
   display: block;
   width: 100%;
   background: none;
-  background-image: url('/src/assets/distinction-divider.svg');
-  background-size: 100% auto;
+  background-image: url('/src/assets/seperator2.png');
+  z-index: 10;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 6%;
   padding-bottom: 6%;
-  z-index: 10;
+
 }

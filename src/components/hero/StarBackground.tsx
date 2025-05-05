@@ -73,20 +73,21 @@ const StarBackground: React.FC = () => {
         ctx.save();
         ctx.translate(star.position.x, star.position.y);
         
+        const amberGold = '#FFDB58';
         if (star.isCircle) {
           // Draw circle star with gradient
           const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, star.size * 3);
-          gradient.addColorStop(0, `rgba(255, 255, 255, ${currentOpacity})`);
-          gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+          gradient.addColorStop(0, `rgba(255, 219, 88, ${currentOpacity})`);
+          gradient.addColorStop(1, 'rgba(255, 219, 88, 0)');
           
           ctx.fillStyle = gradient;
           ctx.beginPath();
           ctx.arc(0, 0, star.size * 3, 0, Math.PI * 2);
           ctx.fill();
         } else {
-          // Draw diamond star
-          ctx.fillStyle = `rgba(255, 255, 255, ${currentOpacity})`;
-          ctx.beginPath();
+          ctx.fillStyle = `rgba(255, 219, 88, ${currentOpacity})`;
+          ctx.beginPath(); // Draw diamond star
+
           ctx.moveTo(0, -star.size * 2);
           ctx.lineTo(star.size * 2, 0);
           ctx.lineTo(0, star.size * 2);
@@ -96,7 +97,7 @@ const StarBackground: React.FC = () => {
           
           // Add subtle glow for some stars
           if (star.size > 1.5) {
-            ctx.shadowColor = 'rgba(255, 255, 255, 0.5)';
+            ctx.shadowColor = `rgba(255, 219, 88, 0.5)`;
             ctx.shadowBlur = 5;
           }
         }

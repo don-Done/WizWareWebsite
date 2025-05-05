@@ -62,7 +62,6 @@ export const createInitialStars = (container: HTMLDivElement | null): HTMLDivEle
     star.style.position = 'absolute';
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
-    star.style.backgroundColor = 'transparent';
     
     // Use softer star shape
     if (Math.random() > 0.7) {
@@ -70,7 +69,7 @@ export const createInitialStars = (container: HTMLDivElement | null): HTMLDivEle
     } else {
       star.style.clipPath = 'polygon(50% 0%, 50% 30%, 100% 50%, 50% 70%, 50% 100%, 0% 50%)';
     }
-    star.style.backgroundColor = '#FFD755';
+    star.style.backgroundColor = '#FFDB58'; // Amber Gold color
     
     star.style.left = `${Math.random() * 100}vw`;
     star.style.top = `${Math.random() * 100}vh`;
