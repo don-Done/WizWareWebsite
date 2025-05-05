@@ -1,6 +1,6 @@
-
-import React from 'react';
+import React, { FC } from 'react';
 import { Calendar, Clock, ArrowRight, BookOpen, Code, PenTool } from 'lucide-react';
+
 
 const blogPosts = [
   {
@@ -37,7 +37,7 @@ const blogPosts = [
     icon: PenTool,
   }
 ];
-const nodeEmoji = "🔷";
+
 
 const milestones = [
   {
@@ -137,19 +137,29 @@ const milestones = [
   }
 ];
 
-const MilestoneContent = ({ milestone }) => (
+interface Milestone {
+  phase: string;
+  title: string;
+  duration: string;
+  weeks: { week: string; title: string; tasks: string[] }[];
+  milestone: string;
+}
+
+interface MilestoneContentProps {
+  milestone: Milestone;
+}
+const MilestoneContent: FC<MilestoneContentProps> = ({ milestone }) => (
   <>
       <h4 className="text-2xl font-cinzel text-wizware-gold mb-1">
         {milestone.title}
       </h4>
       <p className="text-sm text-wizware-teal mb-2 font-quicksand">
-        {milestone.duration}
+        {milestone.duration} 
       </p>
-      {milestone.weeks.map((weekData, weekIndex) => (
+      {milestone.weeks.map((weekData, weekIndex: number) => (
         <div key={weekIndex} className="mb-2">
           
-          
-              <h5 className="text-base font-medium text-wizware-gold">
+          <h5 className="text-base font-medium text-wizware-gold">
               {weekData.week}: {weekData.title}
               </h5>
               <ul className=" text-gray-300 text-sm font-quicksand">
@@ -158,14 +168,14 @@ const MilestoneContent = ({ milestone }) => (
                     <li key={taskIndex} >{task}</li>
                       <br />
                     </>
-                ))}
+                  ))}
                 
                   {/* Add line break after each task */}
                    <br />
                 </ul>
         </div>
       ))}
-      <p className="text-gray-300 text-sm font-quicksand font-bold mt-2">Milestone: {milestone.milestone}</p>
+      <p className="text-gray-300 text-sm font-quicksand font-bold mt-2">Milestone: {milestone.milestone}</p> 
       </>
   );
 
@@ -307,7 +317,7 @@ const BlogSection = () => {
             
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
-                <div 
+                <div
                   key={index} 
                   className={`relative flex items-center animate-magic-fade-in ${
                     index % 2 === 0 ? 'flex-row-reverse' : ''

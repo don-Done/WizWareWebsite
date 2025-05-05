@@ -16,13 +16,6 @@ const AboutSection = () => {
           <div className="order-2 md:order-1">
             <div className="relative">
               <div className="cosmic-card animate-magic-fade-in">
-                <img 
-                  src="/lovable-uploads/2f7b95f6-c629-4f26-a3fa-a88c96745d01.png" 
-                  alt="Cosmic Sphere" 
-                  className="w-full h-auto rounded-lg animate-rotate-slow" 
-                />
-                
-                {/* Magic particles */}
                 {[...Array(10)].map((_, i) => (
                   <div
                     key={i}
