@@ -37,39 +37,137 @@ const blogPosts = [
     icon: PenTool,
   }
 ];
+const nodeEmoji = "🔷";
 
 const milestones = [
   {
-    date: 'January 2020',
-    title: 'WizWare Founded',
-    description: 'Our journey begins with a small team of passionate developers and educators.'
+    phase: 'Phase 1',
+    title: 'Core Spell System',
+    duration: '2-3 weeks',
+    weeks: [
+      {
+        week: 'Week 1-2',
+        title: 'Implement base node classes and simple execution logic',
+        tasks: [
+          `🔨 Create UGWTSpellNode base class with minimal functionality`,
+          `🔥❄️ Implement 2-3 simple UGWTMagicNode types (e.g., Fire, Ice)`,
+          `📦 Build basic UGWTSpell container class`,
+          `➡️ Establish simple execution flow`,
+        ],
+      },
+    ],
+    milestone: 'Player can create and execute basic linear spells',
   },
   {
-    date: 'July 2020',
-    title: 'First Prototype',
-    description: 'Initial prototype of Grand Wizard Tournament visual programming system completed.'
+    phase: 'Phase 2',
+    title: 'Visual Editor',
+    duration: '2 weeks',
+    weeks: [
+      {
+        week: 'Week 3',
+        title: 'Create the basic editor UI',
+        tasks: [
+          `🖥️ Implement UGWTSpellEditorWidget core functionality`,
+          `🎨 Build node palette with drag-and-drop`,
+          `🔗 Create visual connection system`,
+        ],
+      },
+      {
+        week: 'Week 4',
+        title: 'Add property editing and basic execution preview',
+        tasks: [
+          'Implement UGWTPropertyEditor for node configuration',
+          `✨ Add visual feedback during spell execution`,
+          `🧪 Create simple spell testing mechanism`,
+                  ],
+      },
+    ],
+    milestone: 'Players can visually construct and test spells',
   },
   {
-    date: 'March 2021',
-    title: 'Early Access Launch',
-    description: 'First version released to early access players for feedback and testing.'
+    phase: 'Phase 3',
+    title: 'Gameplay Integration',
+    duration: '2 weeks',
+    weeks: [
+      {
+        week: 'Week 5',
+        title: 'Create simple test environment',
+        tasks: [
+          `🧱 Build a small labyrinth section (3x3x3)`,
+          `🏃⚔️ Implement basic player movement and combat`,
+          `🤖 Add simple enemy AI for testing`,
+        ],
+      },
+      {
+        week: 'Week 6',
+        title: 'Integrate spell system with gameplay',
+        tasks: [
+          'Connect spell execution to in-game effects',
+          `👾 Implement enemy reactions to spells`,
+          `🎯 Add basic objective system`,
+                  ],
+      },
+    ],
+    milestone: 'Complete gameplay loop with spell execution',
   },
   {
-    date: 'October 2022',
-    title: 'Educational Partnership',
-    description: 'Partnered with schools to bring coding education to classrooms.'
-  },
-  {
-    date: 'April 2023',
-    title: 'Full Release',
-    description: 'Grand Wizard Tournament officially launched with full feature set.'
-  },
-  {
-    date: 'September 2024',
-    title: 'Mobile Expansion',
-    description: 'Released mobile version to bring magical coding to more platforms.'
+    phase: 'Phase 4',
+    title: 'Educational Elements & Polish',
+    duration: '1-2 weeks',
+    weeks: [
+      {
+        week: 'Week 7',
+        title: 'Add educational features',
+        tasks: [
+          `💡 Implement tooltips explaining programming concepts`,
+          `📚 Create tutorial sequences for the spell editor`,
+          `📈 Add progress tracking for learned concepts`,
+        ],
+      },
+      {
+        week: 'Week 8',
+        title: 'Final polish for grant submission',
+        tasks: [
+          `🚀 Optimize performance`,
+          'Prepare promotional materials (screenshots, video)',
+        ],
+      },
+    ],
+    milestone: 'MVP ready for Epic MegaGrant submission',
   }
 ];
+
+const MilestoneContent = ({ milestone }) => (
+  <>
+      <h4 className="text-2xl font-cinzel text-wizware-gold mb-1">
+        {milestone.title}
+      </h4>
+      <p className="text-sm text-wizware-teal mb-2 font-quicksand">
+        {milestone.duration}
+      </p>
+      {milestone.weeks.map((weekData, weekIndex) => (
+        <div key={weekIndex} className="mb-2">
+          
+          
+              <h5 className="text-base font-medium text-wizware-gold">
+              {weekData.week}: {weekData.title}
+              </h5>
+              <ul className=" text-gray-300 text-sm font-quicksand">
+                {weekData.tasks.map((task, taskIndex) => (
+                  <>
+                    <li key={taskIndex} >{task}</li>
+                      <br />
+                    </>
+                ))}
+                
+                  {/* Add line break after each task */}
+                   <br />
+                </ul>
+        </div>
+      ))}
+      <p className="text-gray-300 text-sm font-quicksand font-bold mt-2">Milestone: {milestone.milestone}</p>
+      </>
+  );
 
 const BlogSection = () => {
   return (
@@ -218,9 +316,7 @@ const BlogSection = () => {
                 >
                   {/* Content */}
                   <div className={`w-5/12 cosmic-card ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}`}>
-                    <h4 className="text-lg font-cinzel text-wizware-gold mb-1">{milestone.title}</h4>
-                    <p className="text-sm text-wizware-teal mb-2 font-quicksand">{milestone.date}</p>
-                    <p className="text-gray-300 text-sm font-quicksand">{milestone.description}</p>
+                   <MilestoneContent milestone={milestone} />
                   </div>
                   
                   {/* Center point */}

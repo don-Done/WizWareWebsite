@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Github, Twitter, Linkedin, BookOpen, Code, PaintBucket, Music } from 'lucide-react';
 
 // Sample team data - replace with your actual team members

@@ -37,4 +37,4 @@ export const gameData: Game[] = [
   // Add more games as needed
 ];
 
-export const categories = ['All', 'Educational RPG', 'RPG', 'Strategy', 'Puzzle', 'Adventure'];
+export const categories = ['All', 'Grand Wizard Tournament'];

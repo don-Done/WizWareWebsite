@@ -31,6 +31,17 @@
     @apply opacity-30;
   }
 
+  .purple-glow-button::before {
+    content: '';
+    @apply absolute -inset-0.5 rounded-lg bg-gradient-to-r from-wizware-purple to-wizware-dark-purple opacity-0 blur transition-opacity duration-300;
+    z-index: -1;
+  }
+
+  .purple-glow-button:hover::before {
+    @apply opacity-30;
+  }
+
+
   .nav-link {
     @apply relative px-3 py-2 text-sm text-gray-300 transition duration-300 hover:text-wizware-gold;
   }

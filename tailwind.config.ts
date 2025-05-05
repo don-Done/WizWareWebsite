@@ -53,10 +53,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				wizware: {
-					gold: '#FFD700',
-					'dark-gold': '#B8860B',
+					gold: '#E7A929',
+					'dark-gold': '#e7a929',
 					purple: '#6A0DAD',
-					'dark-purple': '#5B21B6',
+					'dark-purple': '#1e113d',
 					teal: '#00CED1',
 					'dark-teal': '#0369A1',
 					black: '#050505',

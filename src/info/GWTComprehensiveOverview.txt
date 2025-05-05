@@ -1,0 +1,202 @@
+# Grand Wizard Tournament - Project Knowledge File
+
+## Game Overview
+
+Grand Wizard Tournament is an educational roguelike game that teaches programming concepts through an engaging magical combat system. Players navigate procedurally generated rooms in a magical labyrinth, fighting enemies while learning fundamental programming concepts through an intuitive visual spell-crafting system.
+
+### Core Game Loop
+1. Navigate procedurally generated rooms
+2. Collect spell components and items
+3. Craft and modify spells using visual programming
+4. Complete wave-specific objectives
+5. Progress through 10 increasingly challenging waves
+6. Compete for high scores and rankings
+
+### Unique Selling Proposition
+- Innovative visual spell-crafting system that teaches programming through gameplay
+- Procedurally generated labyrinth with moving/rotating rooms for infinite replayability
+- Educational content seamlessly integrated into fun gameplay
+
+## Story & Setting
+
+### The Oracle Dilemma
+In the world of Grand Wizard Tournament, young wizards have become overly dependent on magical "Whispering Oracles" that provide spell solutions without teaching understanding. The Grand Wizard Council establishes the Tournament as a way to force wizards to rediscover fundamental magical knowledge by suppressing the Oracles within the labyrinth.
+
+Key story elements:
+- Whispering Oracles (crystal balls containing ancient spirits) represent AI tools
+- Grand Wizard Council wants to promote understanding, not just knowledge
+- Tournament challenges wizards to rely on their own abilities
+- The narrative parallels modern concerns about AI tools replacing true understanding
+
+### Main Characters
+- Elder Archmage Thorne: Leader of the Grand Wizard Council
+- Archmage Lyra: Council member concerned about Oracle dependence
+- Elara Dawnbreak: Student who discovered the first Oracle
+- Tournament participants: Player characters and rival wizards
+
+## Gameplay Mechanics
+
+### The Grimoire (Visual Spell-Crafting System)
+The heart of the game is its visual programming interface for creating spells:
+
+#### Node Types
+1. **Magic Nodes**: Core spell effects (fireball, ice blast, healing wave)
+2. **Trigger Nodes**: Event-based conditions (on cast, on hit, on enemy enter)
+3. **Effect Nodes**: Actions produced by spells (damage, teleport, knockback)
+4. **Condition Nodes**: Logic control (if/then statements)
+5. **Variable Nodes**: Data storage and manipulation
+6. **Flow Nodes**: Loops and branches (repeat, while, for each)
+
+Players connect these nodes to create spells with varying effects, complexity, and efficiency.
+
+### Programming Concepts Taught
+1. **Sequential Logic**: Actions execute in connected order
+2. **Conditional Statements**: IF-THEN structures
+3. **Variables and Data**: Storage and manipulation of values
+4. **Loops**: Repeated actions and sustained effects
+5. **Functions**: Reusable spell combinations
+
+### Labyrinth Structure
+- 3x3x3 cubic grid (in multiplayer/online mode)
+- Each room is a perfect cube with 2-6 doors
+- Rooms can be swapped or entire planes rotated, altering the maze
+- Room types: Combat, Empty, Treasure, Shop, Puzzle, Boss
+
+### Wave System
+- 10 progressive waves of increasing difficulty
+- Each wave has specific objectives
+- Enemy types evolve through the waves
+- Final wave culminates in a boss fight
+
+## Game Systems
+
+### Item System
+1. **Spell Components**: Unlock new node types and elements
+2. **Equipment**:
+   - Wands: Affect spell power and critical chance
+   - Hats: Improve spell range and mana efficiency
+   - Robes: Provide elemental resistances and status effect duration
+3. **Consumables**: Potions, scrolls, gems for temporary or permanent effects
+
+### Enemy Types
+- Early Waves: Goblins, Rats, Slimes
+- Mid Waves: Skeletons, Dark Wizards, Mimics
+- Late Waves: Elite versions of previous enemies
+- Boss Wave: Powerful unique enemies
+
+### Progression Systems
+- **Player Level**: Experience from objectives, enemies, puzzles, and spell creation
+- **Spell Unlocks**: New components, elements, and modifiers
+- **Ranking System**: Competitive ladder from Bronze to Grandmaster
+
+## Educational Elements
+
+### Educational Tracking
+The game monitors players' understanding of programming concepts:
+- Tracks complexity of created spells
+- Analyzes use of different node types
+- Provides feedback on programming concept mastery
+- Suggests improvements and new challenges
+
+### Tutorial System
+- Interactive tutorials introduce spell creation basics
+- Guided challenges to learn specific concepts
+- Progressive difficulty matching educational growth
+
+## Technical Implementation
+
+### Core Framework
+- Built with Unreal Engine
+- C++ codebase with 30+ custom classes
+
+### Key Classes
+1. **Spell System**:
+   - UGWTSpellNode - Base class for all spell nodes
+   - UGWTSpell - Complete spell composed of nodes
+   - UGWTGrimoire - Manages player's spell collection
+
+2. **Character System**:
+   - AGWTCharacter - Base character class
+   - AGWTPlayerCharacter - Player implementation
+   - AGWTEnemyCharacter - Enemy implementation
+
+3. **Level Generation**:
+   - AGWTLevelGenerator - Procedural labyrinth creation
+   - AGWTRoom - Individual room implementation
+
+4. **UI System**:
+   - UGWTHUDWidget - Gameplay interface
+   - UGWTSpellEditorWidget - Visual programming interface
+   - UGWTMiniMapWidget - Labyrinth navigation
+
+5. **Educational System**:
+   - UGWTEducationalTracker - Monitors concept understanding
+   - UGWTTutorialManager - Manages tutorial sequences
+
+### Enums and Data Types
+Extensive type system including:
+- EGWTElementType (Fire, Ice, Lightning, etc.)
+- EGWTRoomType (Combat, Treasure, Shop, etc.)
+- EGWTStatusEffectType (Burning, Frozen, etc.)
+- EGWTSpellComponentType (Magic, Trigger, Effect, etc.)
+
+## Visual Style
+
+### Art Direction
+- Magical academy aesthetic
+- Vibrant spell effects
+- Clean, readable UI for programming interface
+- Distinct visual identity for different room types
+
+### UI Elements
+- Spell editor with node connections
+- Minimap for navigation
+- Health and mana meters
+- Objective tracker
+- Inventory system
+
+## Business Model & Potential
+
+### Target Audience
+- Primary: Students aged 12-25
+- Secondary: Coding educators and educational institutions
+- Appeal to both casual and hardcore gamers
+
+### Revenue Projections
+- 2025: $1M (200,000 copies at $5)
+- 2026: $3.75-7.5M (750,000 copies at $5-10)
+- 2027: $7.5-22.5M (1.5M copies at $5-15)
+
+### Growth Strategies
+- Strategic partnerships with educational platforms
+- Humble Bundle collaborations
+- Epic Games Store timed exclusivity
+- Educational institution licensing
+
+## Development Timeline
+
+Currently in early development with planned release in 8-12 months:
+
+### Phase 1: Core Systems (Current)
+- Spell creation system
+- Room generation
+- Basic combat
+- Educational tracking
+
+### Phase 2: Content Development
+- Enemy variety
+- Spell components
+- Tutorial system
+- Analytics integration
+
+### Phase 3: Polish
+- UI/UX refinement
+- Performance optimization
+- Educational testing
+- Balancing
+
+### Phase 4: Release Preparation
+- Beta testing
+- Educational validation
+- Marketing preparation
+- Distribution setup
