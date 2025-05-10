@@ -14,8 +14,6 @@ const Index = () => {
 <Header />
 <HeroSection />
 <div className="w-full distinction-line"></div>
-<AboutSection />
-<div className="w-full distinction-line"></div>
 <GamesSection />
 <div className="w-full distinction-line"></div>
 <EducationalSection />

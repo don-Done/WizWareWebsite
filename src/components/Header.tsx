@@ -24,7 +24,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-cinzel font-bold text-wizware-gold flex items-center gap-2">
+        <a href="/" className="text-2xl font-cinzel font-bold text-wizware-gold flex items-center gap-2">
           <Wand2 className="text-wizware-gold" size={24} />
           WizWare
         </a>
@@ -39,7 +39,7 @@ const Header = () => {
             <Gamepad2 className="text-white" size={16} />
             Game
           </a>
-          <a
+          <a 
             href="/education"
             className="nav-link font-quicksand flex items-center gap-1"
           >
@@ -54,7 +54,7 @@ const Header = () => {
             <Mail className="text-white" size={16} />
             Contact
           </a>
-          <a href="/games" className="cosmic-button ml-6">
+          <a href="/game" className="cosmic-button ml-6">
             Play Now
           </a>
         </nav>
@@ -80,7 +80,7 @@ const Header = () => {
               <Gamepad2 className="text-white" size={16} />
               Game
             </a>
-            <a
+            <a 
               href="/education"
               className="nav-link font-quicksand flex items-center gap-1"
               onClick={() => setIsMenuOpen(false)}
@@ -96,7 +96,7 @@ const Header = () => {
               <Mail className="text-white" size={16} />
               Contact
             </a>
-            <a href="/games" className="cosmic-button text-center" onClick={() => setIsMenuOpen(false)}>
+            <a href="/game" className="cosmic-button text-center" onClick={() => setIsMenuOpen(false)}>
               Play Now
             </a>
           </nav>

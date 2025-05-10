@@ -65,7 +65,7 @@ const GamesSection = () => {
                   
                   <div className="mt-6">
                     <a 
-                      href={game.link} 
+                      href="/game" 
                       className="cosmic-button inline-flex items-center mb-6"
                     >
                       Enter the Tournament <ExternalLink size={16} className="ml-2" />
@@ -121,8 +121,8 @@ const GameCard = ({ game, index, featured }: GameCardProps) => (
     <p className={`text-gray-300 ${featured ? '' : 'text-sm'} mb-${featured ? '4' : '3'} ${featured ? '' : 'line-clamp-2'} font-quicksand`}>
       {game.description}
     </p>
-    <a 
-      href={game.link} 
+    <a
+      href="/game"
       className={`inline-flex items-center text-${featured ? '' : 'sm'} text-wizware-gold hover:text-wizware-teal transition-colors font-quicksand`}
     >
       Learn More <ExternalLink size={featured ? 16 : 14} className="ml-1" />

@@ -46,10 +46,12 @@ const StarBackground: React.FC = () => {
 
     // Animation function
     const animateStars = () => {
+      console.log('animating stars');
       if (!canvas || !ctx) return;
       
       // Clear canvas
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
       
       // Update and draw stars
       const time = performance.now() * 0.001; // Current time in seconds

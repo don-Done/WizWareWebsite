@@ -1,10 +1,13 @@
 import { Wand2, Sparkles, Gamepad2, Users2, BookOpen } from 'lucide-react';
+import Header from './Header';
+
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-wizware-black to-wizware-dark-black sacred-geometry">
+    <section id="about" className="min-h-screen bg-gradient-to-b from-wizware-black to-wizware-dark-black sacred-geometry pt-16">
+      <Header />
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-magic-fade-in">
-          <h2 className="wizware-title text-4xl md:text-5xl mb-4">Our Magical Journey</h2>
+        <div className="text-center mb-16 animate-magic-fade-in mt-20">
+        <h3 className="wizware-subtitle text-2xl md:text-3xl mb-4">Crafting Digital Magic</h3>
           <p className="text-gray-300 max-w-3xl mx-auto font-quicksand">
             Founded by passionate gamers and wizards of code, WizWare is dedicated to creating 
             immersive gaming experiences that blend fantasy, strategy, and storytelling while
@@ -12,31 +15,10 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1">
-            <div className="relative">
-              <div className="cosmic-card animate-magic-fade-in">
-                {[...Array(10)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute rounded-full bg-wizware-teal animate-pulse-glow"
-                    style={{
-                      width: `${Math.random() * 6 + 3}px`,
-                      height: `${Math.random() * 6 + 3}px`,
-                      top: `${Math.random() * 100}%`,
-                      left: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 3}s`,
-                      zIndex: 2,
-                    }}
-                  ></div>
-                ))}
-              </div>
-            </div>
-          </div>
-          
+        <div className="space-y-8">
+
           <div className="order-1 md:order-2 space-y-8">
             <div className="animate-magic-fade-in">
-              <h3 className="wizware-subtitle text-2xl md:text-3xl mb-4">Crafting Digital Magic Since 2020</h3>
               <p className="text-gray-300 font-quicksand">
                 At WizWare, we believe games are the modern form of magic - experiences that transport 
                 players to new worlds, challenge their minds, and ignite their imagination. Our team of 

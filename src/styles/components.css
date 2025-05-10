@@ -6,8 +6,8 @@
   .cosmic-button{
       @apply relative px-6 py-3 overflow-hidden font-medium text-wizware-gold rounded-lg shadow-inner shadow-wizware-gold/20 border border-wizware-gold/20 bg-wizware-dark-black hover:shadow-wizware-gold/40 transition-all duration-300 font-cinzel font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-wizware-gold to-wizware-dark-gold;
   }
-  
   .wizware-subtitle {
+    text-shadow: 0 0 6px #8a2be2, 0 0 12px #8a2be2; /* Stronger purple glow */
     @apply font-cinzel font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-br from-wizware-teal to-wizware-purple;
   }
 
@@ -29,16 +29,16 @@
 
   .cosmic-button:hover::before {
     @apply opacity-30;
-  }
+  }  
 
   .purple-glow-button::before {
-    content: '';
-    @apply absolute -inset-0.5 rounded-lg bg-gradient-to-r from-wizware-purple to-wizware-dark-purple opacity-0 blur transition-opacity duration-300;
-    z-index: -1;
+    content: ''; /* Background glow effect */
+    @apply absolute inset-0 rounded-lg bg-gradient-to-r from-wizware-purple to-wizware-dark-purple opacity-0 blur-lg transition-opacity duration-300; /* Increased blur for size */
+ z-index: -1;
   }
 
   .purple-glow-button:hover::before {
-    @apply opacity-30;
+    @apply opacity-70; /* Increased opacity for intensity */
   }
 
 
@@ -117,6 +117,21 @@
     will-change: transform, opacity;
     z-index: 5;
   }
+}
+
+/* Header scroll glow */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  /* Add a transition for the box-shadow */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+header.scrolled {
+  box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5), 0 0 30px rgba(138, 43, 226, 0.3); /* Bigger and glowier purple glow */
+    @apply absolute;
+  will-change: transform, opacity;
 }
 
 .grimoire-section {

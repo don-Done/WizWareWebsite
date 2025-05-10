@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Code, BookOpen, BrainCircuit, Repeat, FunctionSquare, Braces, SplitSquareVertical, CircleDot, ArrowRight, Circle, Square, CornerDownRight } from 'lucide-react';
 
 const EducationalSection = () => {

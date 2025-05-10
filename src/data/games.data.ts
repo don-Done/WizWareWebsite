@@ -34,7 +34,6 @@ export const gameData: Game[] = [
       }
     ]
   },
-  // Add more games as needed
 ];
 
-export const categories = ['All', 'Grand Wizard Tournament'];
+export const categories = ['Grand Wizard Tournament', 'coming soon'];
