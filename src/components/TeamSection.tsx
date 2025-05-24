@@ -1,16 +1,16 @@
 
-import { Github, Twitter, Linkedin, BookOpen, Code, PaintBucket, Music } from 'lucide-react';
+import { Github, Twitter, Linkedin, BookOpen, HeartHandshake, Code, PaintBucket, Music } from 'lucide-react';
 
 // Sample team data - replace with your actual team members
 const teamMembers = [
   {
     id: 1,
-    name: 'Alex Morgan',
+    name: 'Ako',
     role: 'Founder & Creative Director',
     bio: 'Gaming enthusiast with a decade of experience in game development and storytelling.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop',
-    specialty: BookOpen,
-    specialtyColor: 'text-wizware-gold',
+    image: 'src/assets/4.jpg',
+    specialty: HeartHandshake,
+    specialtyColor: 'text-wizware-red',
     social: {
       twitter: '#',
       github: '#',
@@ -19,10 +19,10 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: 'Jamie Chen',
+    name: 'Done',
     role: 'Lead Developer',
     bio: 'Code wizard specializing in game mechanics and technical optimization.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop',
+    image: 'src/assets/8.jpg',
     specialty: Code,
     specialtyColor: 'text-wizware-purple',
     social: {
@@ -33,10 +33,10 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: 'Sasha Williams',
+    name: 'Merlin',
     role: 'Art Director',
     bio: 'Bringing magical worlds to life through stunning visual design and animation.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop',
+    image: 'src/assets/Merlin.jpg',
     specialty: PaintBucket,
     specialtyColor: 'text-wizware-teal',
     social: {
@@ -47,10 +47,10 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: 'Ray Johnson',
+    name: 'Gwendolin',
     role: 'Sound Designer',
     bio: 'Creating immersive audio experiences that enhance the magic of our games.',
-    image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=1974&auto=format&fit=crop',
+    image: 'src/assets/Gwendolin.jpg',
     specialty: Music,
     specialtyColor: 'text-wizware-gold',
     social: {
@@ -66,8 +66,8 @@ const TeamSection = () => {
     <section id="team" className="py-20 bg-gradient-to-b from-wizware-dark-black to-wizware-black sacred-geometry">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-magic-fade-in">
-          <h2 className="wizware-title text-4xl md:text-5xl mb-4">Our Wizards</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand">
+          <h2 className="wizware-title text-3xl md:text-4xl lg:text-5xl mb-4">Our Wizards</h2>
+          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand text-2xl">
             Meet the talented team behind the magic at WizWare
           </p>
         </div>
@@ -93,7 +93,7 @@ const TeamSection = () => {
                 </div>
                 
                 {/* Magic particles */}
-                {[...Array(8)].map((_, i) => (
+                {[...Array(200)].map((_, i) => (
                   <div
                     key={i}
                     className="absolute rounded-full bg-wizware-gold opacity-0 group-hover:opacity-30 transition-opacity"
@@ -103,7 +103,9 @@ const TeamSection = () => {
                       top: `${Math.random() * 100}%`,
                       left: `${Math.random() * 100}%`,
                       animationDelay: `${Math.random() * 2}s`,
-                      animation: 'sparkle 3s ease-in-out infinite',
+                      transform: 'rotate(45deg)',
+                      clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 67% 57%, 79% 91%, 50% 70%, 21% 91%, 33% 57%, 2% 35%, 39% 35%)',
+                      animation: `sparkle 3s ease-in-out infinite ${Math.random() * 2}s, float ${2 + Math.random()}s`,
                     }}
                   ></div>
                 ))}
@@ -134,9 +136,9 @@ const TeamSection = () => {
                 </div>
               </div>
               
-              <h3 className="text-xl font-cinzel text-wizware-gold mb-1">{member.name}</h3>
-              <p className="text-wizware-teal text-sm font-medium mb-3 font-quicksand">{member.role}</p>
-              <p className="text-gray-300 text-sm flex-grow font-quicksand">{member.bio}</p>
+ <h3 className="text-3xl font-cinzel text-wizware-gold mb-1">{member.name}</h3>
+ <p className="text-wizware-teal text-2xl font-medium mb-3 font-quicksand">{member.role}</p>
+ <p className="text-gray-300 text-2xl flex-grow font-quicksand">{member.bio}</p>
             </div>
           ))}
         </div>
@@ -144,9 +146,9 @@ const TeamSection = () => {
         <div className="mt-16 cosmic-card animate-magic-fade-in" style={{ animationDelay: '0.8s' }}>
           <div className="text-center">
             <h3 className="text-2xl font-cinzel text-wizware-gold mb-4">Join Our Magical Team</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto mb-6 font-quicksand">
-              We're always looking for talented individuals who are passionate about creating
-              magical gaming experiences and educational content.
+ <p className="text-gray-300 max-w-3xl mx-auto mb-6 font-quicksand text-2xl">
+ We're always looking for talented individuals who are passionate about creating
+              magical gaming experiences.
             </p>
             <a href="#contact" className="cosmic-button inline-flex">View Open Positions</a>
           </div>

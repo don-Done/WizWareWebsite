@@ -40,7 +40,7 @@ const EducationalSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-magic-fade-in">
           <h2 className="wizware-title text-4xl md:text-5xl mb-4">Educational Approach</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand">
+          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand text-2xl">
             Our games teach real programming concepts through magical metaphors, making learning engaging and fun
           </p>
         </div>
@@ -53,12 +53,12 @@ const EducationalSection = () => {
                 <h3 className="text-2xl font-cinzel text-wizware-gold">Code Through Magic</h3>
               </div>
               
-              <p className="text-gray-300 mb-8 font-quicksand">
+              <p className="text-gray-300 mb-8 font-quicksand text-2xl">
                 In the Grand Wizard Tournament, players learn programming concepts by crafting magical spells.
                 Our visual programming system uses magical metaphors to teach real coding skills that transfer
                 to real-world programming languages.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="cosmic-card p-4 flex items-start">
                   <BookOpen className="text-wizware-purple mt-1 mr-3 flex-shrink-0" size={24} />
@@ -66,7 +66,7 @@ const EducationalSection = () => {
                     <h4 className="text-wizware-purple font-cinzel text-lg mb-2">Learn by Doing</h4>
                     <p className="text-gray-400 text-sm font-quicksand">
                       Players master programming concepts by solving puzzles and challenges in an immersive magical world,
-                      creating lasting knowledge through hands-on experience.
+ creating lasting knowledge through hands-on experience.
                     </p>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ const EducationalSection = () => {
                   <div>
                     <h4 className="text-wizware-teal font-cinzel text-lg mb-2">Immediate Feedback</h4>
                     <p className="text-gray-400 text-sm font-quicksand">
-                      See your code in action instantly as magical effects appear in the game world. 
+                      See your code in action instantly as magical effects appear in the game world.
                       This immediate feedback loop accelerates learning and engagement.
                     </p>
                   </div>
@@ -112,11 +112,11 @@ const EducationalSection = () => {
           </div>
           
           <div>
-            <h3 className="text-2xl font-cinzel text-wizware-teal mb-6 animate-magic-fade-in" style={{ animationDelay: '0.3s' }}>
+            <h3 className="text-3xl font-cinzel text-wizware-teal mb-6 animate-magic-fade-in" style={{ animationDelay: '0.3s' }}>
               Magical Blueprint System
             </h3>
-            
-            {/* UE5-style Blueprint Component */}
+
+ {/* UE5-style Blueprint Component */}
             <div className="mb-8 overflow-hidden rounded-lg bg-[#1a1c1f] border border-[#2a2c35] p-4 animate-magic-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="mb-3 pb-2 border-b border-[#2a2c35]">
                 <h4 className="text-[#0ea5e9] font-cinzel">Fireball Spell Blueprint</h4>
@@ -134,7 +134,7 @@ const EducationalSection = () => {
                   <ArrowRight size={14} className="text-[#33C3F0] ml-2" />
                 </div>
                 
-                {/* Check mana node */}
+ {/* Check mana node */}
                 <div className="flex items-center justify-center">
                   <div className="bg-[#4F2D67] rounded-md w-6 h-6 flex items-center justify-center">
                     <Square size={14} className="text-[#A976C3]" />
@@ -146,7 +146,7 @@ const EducationalSection = () => {
                   </div>
                 </div>
                 
-                {/* Branch lines */}
+ {/* Branch lines */}
                 <div className="flex justify-center relative h-6">
                   <div className="absolute top-0 bottom-0 w-px bg-[#A976C3]"></div>
                 </div>
@@ -165,7 +165,7 @@ const EducationalSection = () => {
                   </div>
                 </div>
                 
-                {/* True path */}
+ {/* True path */}
                 <div className="flex items-center justify-center">
                   <div className="bg-[#2D6730] rounded-md w-6 h-6 flex items-center justify-center">
                     <Square size={14} className="text-[#3eb51f]" />
@@ -193,7 +193,7 @@ const EducationalSection = () => {
                   </div>
                 </div>
                 
-                {/* False path */}
+ {/* False path */}
                 <div className="flex items-center justify-center row-start-4 row-span-3 col-start-1">
                   <div className="relative h-full">
                     <div className="absolute right-3 top-6 bottom-0 w-px bg-[#b51f1f]"></div>
@@ -225,8 +225,8 @@ const EducationalSection = () => {
                   <div className="flex items-start">
                     <concept.icon className="text-wizware-gold mt-1 mr-3 flex-shrink-0" size={24} />
                     <div className="flex-grow">
-                      <h4 className="text-wizware-gold font-cinzel text-lg mb-2">{concept.title}</h4>
-                      <p className="text-gray-300 mb-3 font-quicksand">{concept.description}</p>
+                      <h4 className="text-wizware-gold font-cinzel text-xl mb-2">{concept.title}</h4>
+                      <p className="text-gray-300 mb-3 font-quicksand text-lg">{concept.description}</p>
                       
                       {/* UE5-style blueprints for code examples */}
                       <div className="bg-[#1a1c1f] border border-[#2a2c35] rounded-md p-3 overflow-x-auto">
@@ -246,13 +246,13 @@ const EducationalSection = () => {
             </div>
             
             <div className="mt-8 cosmic-card animate-magic-fade-in" style={{ animationDelay: '0.9s' }}>
-              <h4 className="text-wizware-gold font-cinzel text-lg mb-3 flex items-center">
+              <h4 className="text-wizware-gold font-cinzel text-xl mb-3 flex items-center">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd"></path>
                 </svg>
                 Skills that Transfer
               </h4>
-              <p className="text-gray-300 font-quicksand">
+              <p className="text-gray-300 font-quicksand text-lg">
                 The programming concepts learned in our games directly transfer to real-world coding languages like JavaScript, Python, and C#, giving players valuable skills for potential careers in technology.
               </p>
             </div>

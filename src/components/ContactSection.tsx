@@ -31,15 +31,15 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-magic-fade-in">
           <h2 className="wizware-title text-4xl md:text-5xl mb-4">Join Our Magical Community</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand">
+          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand text-2xl">
             Stay updated with our latest releases, behind-the-scenes content, and exclusive offers
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="animate-magic-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h3 className="wizware-subtitle text-2xl md:text-3xl mb-6">Get in Touch</h3>
-            <p className="text-gray-300 mb-8 font-quicksand">
+            <h3 className="wizware-subtitle text-3xl mb-6">Get in Touch</h3>
+            <p className="text-gray-300 mb-8 font-quicksand text-2xl">
               Have questions, suggestions, or just want to chat about games? 
               We'd love to hear from you! Our community is what makes the magic happen.
             </p>
@@ -49,14 +49,14 @@ const ContactSection = () => {
                 <Mail className="text-wizware-gold mt-1 mr-4 flex-shrink-0" size={20} />
                 <div>
                   <h4 className="text-white font-medium mb-1 font-cinzel">Email Us</h4>
-                  <p className="text-gray-400 font-quicksand">contact@wizware-games.com</p>
+                  <p className="text-gray-400 font-quicksand text-2xl">contact@wizware-games.com</p>
                 </div>
               </div>
               
               <div className="flex items-start cosmic-card p-4">
                 <MapPin className="text-wizware-gold mt-1 mr-4 flex-shrink-0" size={20} />
                 <div>
-                  <h4 className="text-white font-medium mb-1 font-cinzel">Visit Our Studio</h4>
+                  <h4 className="text-white font-medium mb-1 font-cinzel text-2xl">Visit Our Studio</h4>
                   <p className="text-gray-400 font-quicksand">123 Magic Lane, Digital City, 98765</p>
                 </div>
               </div>
@@ -64,9 +64,9 @@ const ContactSection = () => {
               <div className="flex items-start cosmic-card p-4">
                 <MessageSquare className="text-wizware-gold mt-1 mr-4 flex-shrink-0" size={20} />
                 <div>
-                  <h4 className="text-white font-medium mb-1 font-cinzel">Community Discord</h4>
-                  <p className="text-gray-400 font-quicksand">Join our active community of players, educators, and developers</p>
-                  <a href="#" className="text-wizware-teal hover:text-wizware-gold transition-colors text-sm mt-1 inline-block font-quicksand">
+                  <h4 className="text-white font-medium mb-1 font-cinzel text-2xl">Community Discord</h4>
+                  <p className="text-gray-400 font-quicksand text-2xl">Join our active community of players, educators, and developers</p>
+                  <a href="#" className="text-wizware-teal hover:text-wizware-gold transition-colors text-2xl mt-1 inline-block font-quicksand">
                     discord.gg/wizwaregames
                   </a>
                 </div>
@@ -74,7 +74,7 @@ const ContactSection = () => {
             </div>
             
             <div className="mt-10 animate-magic-fade-in" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-xl text-wizware-gold font-cinzel mb-4">Follow the Magic</h3>
+              <h3 className="text-3xl text-wizware-gold font-cinzel mb-4">Follow the Magic</h3>
               <div className="flex gap-4">
                 <a 
                   href="#" 
@@ -117,8 +117,8 @@ const ContactSection = () => {
           </div>
           
           <div className="animate-magic-fade-in" style={{ animationDelay: '0.4s' }}>
-            <h3 className="wizware-subtitle text-2xl md:text-3xl mb-6">Join Our Newsletter</h3>
-            <p className="text-gray-300 mb-8 font-quicksand">
+            <h3 className="wizware-subtitle text-3xl mb-6">Join Our Newsletter</h3>
+            <p className="text-gray-300 mb-8 font-quicksand text-2xl">
               Subscribe to get early access to beta releases, news about upcoming games, 
               and exclusive content only available to our community members.
             </p>
@@ -126,7 +126,7 @@ const ContactSection = () => {
             <form className="space-y-6">
               <div className="cosmic-card p-4 transition-all duration-300 focus-within:scale-[1.01]">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2 font-quicksand">Name</label>
-                <input
+                <input className="text-2xl"
                   type="text"
                   id="name"
                   placeholder="Your name"
@@ -136,7 +136,7 @@ const ContactSection = () => {
               
               <div className="cosmic-card p-4 transition-all duration-300 focus-within:scale-[1.01]">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2 font-quicksand">Email</label>
-                <input
+                <input className="text-2xl"
                   type="email"
                   id="email"
                   placeholder="your.email@example.com"
@@ -163,8 +163,8 @@ const ContactSection = () => {
         {/* FAQ Section */}
         <div className="mt-20 animate-magic-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="text-center mb-10">
-            <h3 className="text-2xl font-cinzel text-wizware-gold mb-2">Frequently Asked Questions</h3>
-            <p className="text-gray-300 font-quicksand">Have questions? We have magical answers!</p>
+            <h3 className="text-3xl font-cinzel text-wizware-gold mb-2">Frequently Asked Questions</h3>
+            <p className="text-gray-300 font-quicksand text-2xl">Have questions? We have magical answers!</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -177,8 +177,8 @@ const ContactSection = () => {
                 <div className="flex items-start">
                   <HelpCircle className="text-wizware-gold mt-1 mr-3 flex-shrink-0" size={20} />
                   <div>
-                    <h4 className="text-wizware-teal font-cinzel text-lg mb-2">{item.question}</h4>
-                    <p className="text-gray-300 text-sm font-quicksand">{item.answer}</p>
+                    <h4 className="text-wizware-teal font-cinzel text-2xl mb-2">{item.question}</h4>
+                    <p className="text-gray-300 font-quicksand text-2xl">{item.answer}</p>
                   </div>
                 </div>
               </div>

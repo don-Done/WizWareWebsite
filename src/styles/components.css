@@ -181,6 +181,7 @@ header.scrolled {
 }
 
 .distinction-line {
+  position: relative;
   height: 0;
   display: block;
   width: 100%;
@@ -192,5 +193,16 @@ header.scrolled {
   background-repeat: no-repeat;
   padding-top: 9%;
   padding-bottom: 6%;
+}
 
+ .distinction-line::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/src/assets/seperator2.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(22px);
+  z-index: -1;
 }

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Calendar, Clock, ArrowRight, BookOpen, Code, PenTool } from 'lucide-react';
 
 
@@ -11,18 +11,18 @@ const blogPosts = [
     date: 'March 15, 2025',
     readTime: '8 min read',
     image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=2106&auto=format&fit=crop',
-    author: 'Alex Morgan',
+    author: 'Ako',
     icon: BookOpen,
   },
   {
     id: 2,
-    title: 'Building Visual Programming Systems for Non-Programmers',
+    title: 'Building Visual Programming Systems',
     excerpt: 'A deep dive into creating intuitive interfaces that teach coding concepts without overwhelming new users.',
     category: 'Development',
     date: 'February 28, 2025',
     readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=2070&auto=format&fit=crop',
-    author: 'Jamie Chen',
+    image: 'https://images.unsplash.com/photo-1625686081220-a15407e872b8?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D=80&w=2070&auto=format&fit=crop',
+    author: 'Done',
     icon: Code,
   },
   {
@@ -33,7 +33,7 @@ const blogPosts = [
     date: 'January 20, 2025',
     readTime: '6 min read',
     image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop',
-    author: 'Sasha Williams',
+    author: 'Ako',
     icon: PenTool,
   }
 ];
@@ -43,10 +43,10 @@ const milestones = [
   {
     phase: 'Phase 1',
     title: 'Core Spell System',
-    duration: '2-3 weeks',
+    duration: '',
     weeks: [
       {
-        week: 'Week 1-2',
+        week: '',
         title: 'Implement base node classes and simple execution logic',
         tasks: [
           `🔨 Create UGWTSpellNode base class with minimal functionality`,
@@ -150,22 +150,22 @@ interface MilestoneContentProps {
 }
 const MilestoneContent: FC<MilestoneContentProps> = ({ milestone }) => (
   <>
-      <h4 className="text-2xl font-cinzel text-wizware-gold mb-1">
-        {milestone.title}
+      <h4 className="text-2xl font-cinzel text-wizware-teal mb-1">
+ {milestone.title}
       </h4>
-      <p className="text-sm text-wizware-teal mb-2 font-quicksand">
-        {milestone.duration} 
+      <p className="text-2xl text-wizware-teal mb-2 font-quicksand">
+        {milestone.duratio} 
       </p>
       {milestone.weeks.map((weekData, weekIndex: number) => (
         <div key={weekIndex} className="mb-2">
           
-          <h5 className="text-base font-medium text-wizware-gold">
-              {weekData.week}: {weekData.title}
+          <h5 className="text-base font-medium mb-2 text-wizware-purple">
+              {weekData.wee} {weekData.title}
               </h5>
-              <ul className=" text-gray-300 text-sm font-quicksand">
+              <ul className=" text-gray-300 text-2xl font-quicksand">
                 {weekData.tasks.map((task, taskIndex) => (
                   <>
-                    <li key={taskIndex} >{task}</li>
+                    <li key={taskIndex}>{task}</li>
                       <br />
                     </>
                   ))}
@@ -174,8 +174,8 @@ const MilestoneContent: FC<MilestoneContentProps> = ({ milestone }) => (
                    <br />
                 </ul>
         </div>
-      ))}
-      <p className="text-gray-300 text-sm font-quicksand font-bold mt-2">Milestone: {milestone.milestone}</p> 
+ ))}
+      <p className="text-wizware-gold text-sm font-quicksand font-bold mt-2">Milestone: {milestone.milestone}</p> 
       </>
   );
 
@@ -184,8 +184,8 @@ const BlogSection = () => {
     <section id="blog" className="py-20 bg-gradient-to-b from-wizware-black to-wizware-dark-black sacred-geometry">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-magic-fade-in">
-          <h2 className="wizware-title text-4xl md:text-5xl mb-4">Development Blog</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand">
+          <h2 className="wizware-title text-3xl md:text-5xl mb-4">Development Blog</h2>
+          <p className="text-gray-300 max-w-3xl mx-auto font-quicksand text-2xl">
             Stay updated with our latest insights, behind-the-scenes content, and development updates
           </p>
         </div>
@@ -220,22 +220,22 @@ const BlogSection = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-2xl font-cinzel text-wizware-gold">Behind the Scenes: Creating the Procedural Labyrinth System</h3>
+                <h3 className="text-3xl font-cinzel text-wizware-gold">Behind the Scenes: Creating the Procedural Labyrinth System</h3>
                 
                 <p className="text-gray-300 font-quicksand">
-                  A detailed look at how we designed and implemented the procedural labyrinth generation system
+                  A detailed look at how we designed and implemented the procedural labyrinth generation system text-2xl
                   that creates unique magical challenges for players in every game. Learn about the algorithms,
                   design challenges, and magical elements that make each run a unique experience.
                 </p>
                 
                 <div className="flex items-center gap-2 mt-4">
                   <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" 
+                    src="src/assets/orb.png" 
                     alt="Author" 
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-wizware-teal font-medium text-sm font-quicksand">Ray Johnson</p>
+                    <p className="text-wizware-teal font-medium text-sm font-quicksand">Ako</p>
                     <p className="text-gray-400 text-xs font-quicksand">Lead Level Designer</p>
                   </div>
                 </div>
@@ -250,7 +250,7 @@ const BlogSection = () => {
         
         {/* Recent posts */}
         <div className="mb-16">
-          <h3 className="text-2xl font-cinzel text-wizware-gold mb-8 animate-magic-fade-in" style={{ animationDelay: '0.3s' }}>Recent Articles</h3>
+          <h3 className="text-3xl font-cinzel text-wizware-gold mb-8 animate-magic-fade-in" style={{ animationDelay: '0.3s' }}>Recent Articles</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
@@ -287,10 +287,10 @@ const BlogSection = () => {
                   </span>
                 </div>
                 
-                <h4 className="text-xl font-cinzel text-wizware-gold mb-3">{post.title}</h4>
-                <p className="text-gray-300 text-sm mb-4 line-clamp-3 font-quicksand">{post.excerpt}</p>
+                <h4 className="text-3xl font-cinzel text-wizware-gold mb-3">{post.title}</h4>
+                <p className="text-gray-300 text-2xl mb-4 line-clamp-3 font-quicksand">{post.excerpt}</p>
                 
-                <div className="flex items-center justify-between mt-auto">
+                <div className="flex items-center justify-between mt-auto text-2xl">
                   <p className="text-gray-400 text-sm font-quicksand">By {post.author}</p>
                   <a 
                     href="#" 
@@ -307,7 +307,7 @@ const BlogSection = () => {
         
         {/* Development Timeline */}
         <div>
-          <h3 className="text-2xl font-cinzel text-wizware-gold mb-8 text-center animate-magic-fade-in" style={{ animationDelay: '0.7s' }}>
+          <h3 className="text-3xl font-cinzel text-wizware-gold mb-8 text-center animate-magic-fade-in" style={{ animationDelay: '0.7s' }}>
             Development Timeline
           </h3>
           

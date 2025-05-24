@@ -36,4 +36,7 @@ export const gameData: Game[] = [
   },
 ];
 
-export const categories = ['Grand Wizard Tournament', 'coming soon'];
+export const categories = [
+  { id: 1, name: 'Grand Wizard Tournament' },
+  { id: 2, name: 'coming soon' }
+];

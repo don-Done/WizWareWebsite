@@ -46,7 +46,6 @@ const StarBackground: React.FC = () => {
 
     // Animation function
     const animateStars = () => {
-      console.log('animating stars');
       if (!canvas || !ctx) return;
       
       // Clear canvas
@@ -79,21 +78,30 @@ const StarBackground: React.FC = () => {
         if (star.isCircle) {
           // Draw circle star with gradient
           const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, star.size * 3);
-          gradient.addColorStop(0, `rgba(255, 219, 88, ${currentOpacity})`);
-          gradient.addColorStop(1, 'rgba(255, 219, 88, 0)');
-          
+          gradient.addColorStop(0, `rgba(255, 219, 88, ${currentOpacity * 0.8})`); // Slightly less opaque center
+          gradient.addColorStop(1, 'rgba(255, 219, 88, 0)'); // Fully transparent outer edge
+
           ctx.fillStyle = gradient;
           ctx.beginPath();
           ctx.arc(0, 0, star.size * 3, 0, Math.PI * 2);
           ctx.fill();
         } else {
+          // Draw star polygon
+          
           ctx.fillStyle = `rgba(255, 219, 88, ${currentOpacity})`;
-          ctx.beginPath(); // Draw diamond star
+          ctx.beginPath(); 
+          // Draw 4-sided star
+          ctx.moveTo(0, -star.size * 2); // Top point
+          ctx.lineTo(star.size * 0.75, -star.size * 0.75); // Top-right inner
+          ctx.lineTo(star.size * 2, 0); // Right point
+          ctx.lineTo(star.size * 0.75, star.size * 0.75); // Bottom-right inner
+          ctx.lineTo(0, star.size * 2); // Bottom point
+          ctx.lineTo(-star.size * 0.75, star.size * 0.75); // Bottom-left inner
+          ctx.lineTo(-star.size * 2, 0); // Left point
+          ctx.lineTo(-star.size * 0.75, -star.size * 0.75); // Top-left inner
+          
 
-          ctx.moveTo(0, -star.size * 2);
-          ctx.lineTo(star.size * 2, 0);
-          ctx.lineTo(0, star.size * 2);
-          ctx.lineTo(-star.size * 2, 0);
+
           ctx.closePath();
           ctx.fill();
           

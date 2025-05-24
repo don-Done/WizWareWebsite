@@ -15,7 +15,7 @@ export const SpellNode = ({ data }: { data: any }) => {
         borderColor="orange-800"
         shadowColor="orange-500"
         rarity={data.rarity || NodeRarity.Common}
-        nodeType={GrimoireNodeType.Trigger} // This would depend on the actual type
+        nodeType={GrimoireNodeType.Spell} // This would depend on the actual type
       >
         <NodeDataPoint color="yellow" text="Element Type" value={data.elementType} />
         <NodeDataPoint color="red" text="Base Damage" value={data.baseDamage.toString()} />

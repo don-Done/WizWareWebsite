@@ -3,7 +3,6 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import GamesSection from '../components/GamesSection';
-import EducationalSection from '../components/EducationalSection';
 import BlogSection from '../components/BlogSection';
 import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
@@ -14,9 +13,9 @@ const Index = () => {
 <Header />
 <HeroSection />
 <div className="w-full distinction-line"></div>
-<GamesSection />
+<AboutSection />
 <div className="w-full distinction-line"></div>
-<EducationalSection />
+<GamesSection />
 <div className="w-full distinction-line"></div>
 <BlogSection />
 <div className="w-full distinction-line"></div>

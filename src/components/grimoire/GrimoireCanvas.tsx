@@ -51,11 +51,11 @@ const FlowCanvas = () => {
   const reactFlowInstance = useReactFlow();
 
   const onConnect = useCallback((params: Connection) => {
-    setEdges((eds) => addEdge({ 
+    setEdges((eds: Edge[] | EdgeBase[]) => addEdge({
       ...params, 
       type: 'manaEdge',
       animated: true,
-      style: { stroke: '#9F7AEA', strokeWidth: 2 }
+      style: { stroke: '#9F7AEA', strokeWidth: 2 },
     }, eds));
   }, [setEdges]);
 

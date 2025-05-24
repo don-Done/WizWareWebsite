@@ -1,6 +1,3 @@
-
-// Helper functions for star animations and interactions
-
 /**
  * Applies interactive behavior to stars based on mouse position
  */

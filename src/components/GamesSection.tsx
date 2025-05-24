@@ -5,17 +5,17 @@ import { GrimoireSystem } from './grimoire/GrimoireSystem';
 import type { Game } from '../types/game.types';
 
 const GamesSection = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('Grand Wizard Tournament');
 
-  const filteredGames = activeCategory === 'All' 
+  const filteredGames = activeCategory === 'Grand Wizard Tournament' 
     ? gameData 
     : gameData.filter(game => game.category === activeCategory);
 
   return (
     <section id="games" className="py-20 bg-gradient-to-b from-wizware-dark-black to-wizware-black sacred-geometry">
       <div className="text-center mb-16 animate-magic-fade-in px-6">
-        <h2 className="wizware-title text-4xl md:text-5xl mb-4">Our Magical Creations</h2>
-        <p className="text-gray-300 max-w-3xl mx-auto font-quicksand">
+        <h2 className="wizware-title text-5xl md:text-5xl mb-4">Our Magical Creations</h2>
+        <p className="text-gray-300 max-w-3xl text-2xl mx-auto font-quicksand">
           Explore our portfolio of enchanting games that will transport you to extraordinary worlds
           and teach valuable skills through immersive gameplay
         </p>
@@ -24,41 +24,37 @@ const GamesSection = () => {
       <div className="flex flex-wrap justify-center gap-4 mb-12 animate-magic-fade-in px-6" style={{ animationDelay: '0.2s' }}>
         {categories.map(category => (
           <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 font-quicksand purple-glow-button ${
-              activeCategory === category
+            key={category.id}
+            onClick={() => setActiveCategory(category.name)}
+            className={`px-4 py-2 rounded-full text-1xl transition-all duration-300 font-quicksand purple-glow-button ${
+              activeCategory === category.name
                 ? 'bg-wizware-gold text-wizware-black font-medium'
                 : 'bg-wizware-dark-black text-gray-300 border border-wizware-gold/20 hover:border-wizware-gold/40'
             }`}
           >
-            {category}
+            {category.name}
           </button>
         ))}
       </div>
       
-      <div className="mb-16">
-        <h3 className="text-2xl text-wizware-gold font-cinzel mb-8 text-center animate-magic-fade-in px-6" style={{ animationDelay: '0.3s' }}>
-          Featured Games
-        </h3>
-        
-        {filteredGames.filter(game => game.id === 1).map(game => (
+      <div className="mb-16">  
+        {filteredGames.map(game => (
           <div key={game.id} className="animate-magic-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="cosmic-card mx-6">
               <div className="grid grid-cols-1 gap-8">
                 <div className="space-y-4">
-                  <h4 className="text-3xl font-cinzel text-wizware-gold mb-2 flex items-center">
-                    <Sparkles className="mr-2" size={24} />
+                  <h4 className="text-5xl font-cinzel text-wizware-gold mb-2 flex items-center">
+                    <Sparkles className="mr-2" size={37} />
                     {game.title}
                   </h4>
-                  <p className="text-gray-300 mb-4 font-quicksand">{game.description}</p>
+                  <p className="text-gray-300 text-2xl text-center mb-4 font-quicksand">{game.description}</p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                     {game.features?.map((feature, index) => (
                       <div key={index} className="cosmic-card p-4">
                         <feature.icon className="text-wizware-teal mb-2" size={20} />
-                        <h5 className="text-wizware-teal font-cinzel text-lg mb-1">{feature.title}</h5>
-                        <p className="text-gray-400 text-sm font-quicksand">{feature.description}</p>
+                        <h5 className="text-wizware-teal font-cinzel text-3xl mb-1">{feature.title}</h5>
+                        <p className="text-gray-300 text-1xl font-quicksand">{feature.description}</p>
                       </div>
                     ))}
                   </div>

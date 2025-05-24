@@ -5,6 +5,7 @@ export enum GrimoireNodeType {
   Condition = 'conditionNode',
   Variable = 'variableNode',
   Flow = 'flowNode'
+  spell = 'spellnode'
 }
 
 export enum NodeRarity {
@@ -21,7 +22,7 @@ export enum VariableType {
   Bool = 'bool',
   Vector = 'vector',
   Target = 'target',
-  Any = 'any'  // Adding the 'Any' type that was missing
+  Any = 'any' 
 }
 
 export enum VariableOperation {
@@ -29,7 +30,7 @@ export enum VariableOperation {
   Read = 'read',
   Add = 'add',
   Multiply = 'multiply',
-  Store = 'store'  // Adding the 'Store' operation that was missing
+  Store = 'store'  
 }
 
 export interface NodeConnectionPoint {
@@ -63,7 +64,12 @@ export const NODE_CONNECTION_POINTS: Record<GrimoireNodeType, NodeConnectionPoin
     type: GrimoireNodeType.Flow,
     label: 'Flow',
     color: 'bg-blue-500'
-  }
+  },
+  [GrimoireNodeType.Spell]: { // <--- Add this block
+    type: GrimoireNodeType.Spell,
+    label: 'Spell',
+    color: 'bg-purple-500' // Use a color consistent with your design
+  },
 };
 
 export interface NodeRarityData {
