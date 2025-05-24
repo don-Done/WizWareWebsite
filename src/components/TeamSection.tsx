@@ -8,7 +8,7 @@ const teamMembers = [
     name: 'Ako',
     role: 'Founder & Creative Director',
     bio: 'Gaming enthusiast with a decade of experience in game development and storytelling.',
-    image: 'src/assets/4.jpg',
+    image: '/src/assets/4.jpg',
     specialty: HeartHandshake,
     specialtyColor: 'text-wizware-red',
     social: {
@@ -22,7 +22,7 @@ const teamMembers = [
     name: 'Done',
     role: 'Lead Developer',
     bio: 'Code wizard specializing in game mechanics and technical optimization.',
-    image: 'src/assets/8.jpg',
+    image: '/src/assets/8.jpg',
     specialty: Code,
     specialtyColor: 'text-wizware-purple',
     social: {
@@ -36,7 +36,7 @@ const teamMembers = [
     name: 'Merlin',
     role: 'Art Director',
     bio: 'Bringing magical worlds to life through stunning visual design and animation.',
-    image: 'src/assets/Merlin.jpg',
+    image: '/src/assets/Merlin.jpg',
     specialty: PaintBucket,
     specialtyColor: 'text-wizware-teal',
     social: {
@@ -50,7 +50,7 @@ const teamMembers = [
     name: 'Gwendolin',
     role: 'Sound Designer',
     bio: 'Creating immersive audio experiences that enhance the magic of our games.',
-    image: 'src/assets/Gwendolin.jpg',
+    image: '/src/assets/Gwendolin.jpg',
     specialty: Music,
     specialtyColor: 'text-wizware-gold',
     social: {
