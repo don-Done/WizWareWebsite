@@ -126,9 +126,8 @@ const ContactSection = () => {
             <form className="space-y-6">
               <div className="cosmic-card p-4 transition-all duration-300 focus-within:scale-[1.01]">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2 font-quicksand">Name</label>
-                <input className="text-2xl"
-                  type="text"
-                  id="name"
+                <input
+                  type="text" id="name"
                   placeholder="Your name"
                   className="w-full px-4 py-3 bg-wizware-dark-black border border-wizware-purple/20 rounded-lg focus:border-wizware-gold/50 focus:outline-none focus:ring-1 focus:ring-wizware-gold/30 transition font-quicksand"
                 />
@@ -136,7 +135,7 @@ const ContactSection = () => {
               
               <div className="cosmic-card p-4 transition-all duration-300 focus-within:scale-[1.01]">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2 font-quicksand">Email</label>
-                <input className="text-2xl"
+                <input
                   type="email"
                   id="email"
                   placeholder="your.email@example.com"
