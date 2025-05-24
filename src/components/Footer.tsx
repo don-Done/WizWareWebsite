@@ -12,9 +12,9 @@ const Footer = () => {
           <div className="mb-8 md:mb-0 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start mb-4">
               <img 
-                src="/lovable-uploads/81bb237b-2c7c-49f0-b707-a6fe996790d4.png" 
+                src="src/assets/orb.png" 
                 alt="WizWare Logo" 
-                className="w-16 h-16 mr-2"
+                className="w-12 h-12 mr-2"
               />
               <div>
                 <h3 className="wizware-title text-xl mb-1">WIZWARE</h3>
@@ -27,21 +27,9 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-center md:text-left">
-            <div>
-              <h4 className="text-wizware-gold font-cinzel text-lg mb-4">Navigation</h4>
-              <ul className="space-y-2 font-quicksand">
-                <li><a href="#" className="text-gray-300 hover:text-wizware-gold transition-colors">Home</a></li>
-                <li><a href="#about" className="text-gray-300 hover:text-wizware-gold transition-colors">About</a></li>
-                <li><a href="#games" className="text-gray-300 hover:text-wizware-gold transition-colors">Games</a></li>
-                <li><a href="#education" className="text-gray-300 hover:text-wizware-gold transition-colors">Education</a></li>
-                <li><a href="#blog" className="text-gray-300 hover:text-wizware-gold transition-colors">Blog</a></li>
-                <li><a href="#team" className="text-gray-300 hover:text-wizware-gold transition-colors">Team</a></li>
-                <li><a href="#contact" className="text-gray-300 hover:text-wizware-gold transition-colors">Contact</a></li>
-              </ul>
-            </div>
+          <div className="flex flex-col md:flex-row justify-start items-center">
             
-            <div>
+            <div className="mr-8">
               <h4 className="text-wizware-gold font-cinzel text-lg mb-4">Legal</h4>
               <ul className="space-y-2 font-quicksand">
                 <li><a href="/privacy-policy" className="text-gray-300 hover:text-wizware-gold transition-colors">Privacy Policy</a></li>
@@ -66,7 +54,7 @@ const Footer = () => {
                   <Map size={14} className="mr-2" /> 123 Magic Lane, Digital City
                 </li>
                 <li className="flex items-center justify-center md:justify-start text-gray-300">
-                  <User2 size={14} className="mr-2" /> John Smith, CEO
+                  <User2 size={14} className="mr-2" /> Ako, CEO
                 </li>
                 <li><a href="#" className="text-gray-300 hover:text-wizware-gold transition-colors flex items-center justify-center md:justify-start">
                   <Shield size={14} className="mr-2" /> Data Protection
@@ -84,7 +72,7 @@ const Footer = () => {
               &copy; {currentYear} WizWare Studios Ltd. All rights reserved. Company Reg: 123456789.
             </p>
             <p>
-              WizWare Studios Ltd is registered in England & Wales. VAT Number: GB123456789.
+              WizWare Studios Ltd is registered in Estonia. VAT Number: EE123456789.
             </p>
           </div>
           

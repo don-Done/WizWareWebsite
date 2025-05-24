@@ -12,7 +12,7 @@ const Index = () => {
 <div className="min-h-screen overflow-x-hidden bg-wizware-black text-white">
 <Header />
 <HeroSection />
-<div className="w-full distinction-line"></div>
+<div id="letsgo" className="w-full distinction-line"></div>
 <AboutSection />
 <div className="w-full distinction-line"></div>
 <GamesSection />

@@ -15,7 +15,7 @@ const GamesSection = () => {
     <section id="games" className="py-20 bg-gradient-to-b from-wizware-dark-black to-wizware-black sacred-geometry">
       <div className="text-center mb-16 animate-magic-fade-in px-6">
         <h2 className="wizware-title text-5xl md:text-5xl mb-4">Our Magical Creations</h2>
-        <p className="text-gray-300 max-w-3xl text-2xl mx-auto font-quicksand">
+        <p className="text-gray-300 max-w-3xl text-3xl mx-auto font-quicksand">
           Explore our portfolio of enchanting games that will transport you to extraordinary worlds
           and teach valuable skills through immersive gameplay
         </p>
@@ -54,7 +54,7 @@ const GamesSection = () => {
                       <div key={index} className="cosmic-card p-4">
                         <feature.icon className="text-wizware-teal mb-2" size={20} />
                         <h5 className="text-wizware-teal font-cinzel text-3xl mb-1">{feature.title}</h5>
-                        <p className="text-gray-300 text-1xl font-quicksand">{feature.description}</p>
+                        <p className="text-gray-300 text-2xl font-quicksand">{feature.description}</p>
                       </div>
                     ))}
                   </div>

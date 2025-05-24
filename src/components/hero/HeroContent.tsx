@@ -37,7 +37,7 @@ const HeroContent: React.FC = () => {
       </div>
 
       <div className="absolute bottom-10 left-0 right-0 mx-auto w-fit animate-bounce">
-        <a href="#about" className="text-wizware-gold hover:text-wizware-teal transition-colors">
+        <a href="#letsgo" className="text-wizware-gold hover:text-wizware-teal transition-colors">
           <ChevronDown size={32} />
         </a>
       </div>

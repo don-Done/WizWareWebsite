@@ -17,7 +17,7 @@ const FAQ = [
   },
   {
     question: "What platforms is the game available on?",
-    answer: "Grand Wizard Tournament is currently available on PC (Windows/Mac/Linux), with mobile versions for iOS and Android. Console versions are in development."
+    answer: "Grand Wizard Tournament will be available on PC (Windows/Linux)."
   },
   {
     question: "How does the educational aspect work?",
