@@ -13,6 +13,11 @@ import { flowNodes } from './data/flowNodes';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { toast } from '@/hooks/use-toast';
 
+interface PaletteNodeData {
+  id: string;
+  title: string;
+}
+
 const elementIcons = {
   Fire: Flame,
   Ice: Snowflake,
@@ -25,7 +30,7 @@ const elementIcons = {
 };
 
 export const NodePalette = () => {
-  const onDragStart = (event: React.DragEvent, nodeType: string, nodeData: any) => {
+  const onDragStart = (event: React.DragEvent, nodeType: string, nodeData: PaletteNodeData) => {
     event.dataTransfer.setData('application/reactflow', nodeType);
     event.dataTransfer.setData('nodeData', JSON.stringify(nodeData));
     

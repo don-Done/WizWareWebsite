@@ -5,7 +5,7 @@ export interface VariableNode {
   title: string;
   variableName: string;
   variableType: VariableType;
-  defaultValue: any;
+  defaultValue: number | boolean | number[] | null; // Based on VariableType enum usage below
   operation: VariableOperation;
   description: string;
   rarity: NodeRarity;

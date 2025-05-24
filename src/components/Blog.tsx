@@ -4,8 +4,16 @@ import { collection, getDocs, addDoc, serverTimestamp } from 'firebase/firestore
 import { Helmet } from 'react-helmet-async';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
+interface Article {
+  id: string;
+  title: string;
+  content: string;
+  author: string;
+  createdAt: any; // You might want to refine this type based on what serverTimestamp returns
+}
+
 const Blog: React.FC = () => {
-  const [articles, setArticles] = useState<any[]>([]);
+  const [articles, setArticles] = useState<Article[]>([]);
   const [user] = useAuthState(auth);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');

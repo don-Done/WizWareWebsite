@@ -3,8 +3,9 @@ import React from 'react';
 import { Database } from 'lucide-react';
 import { GrimoireNode, NodeDataPoint } from '../GrimoireNode';
 import { GrimoireNodeType, NodeRarity, VariableType, VariableOperation } from '../types/nodeTypes';
+import { VariableNode as VariableNodeInterface } from '../data/variableNodes';
 
-export const VariableNode = ({ data }: { data: { title: string; variableName: string; variableType: VariableType; defaultValue: any; operation: VariableOperation; description: string; rarity: NodeRarity; } }) => {
+export const VariableNode = ({ data }: { data: VariableNodeInterface }) => {
   return (
     <div className="relative">
       <GrimoireNode

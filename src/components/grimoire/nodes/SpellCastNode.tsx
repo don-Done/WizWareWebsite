@@ -3,8 +3,23 @@ import React from 'react';
 import { Sparkles } from 'lucide-react';
 import { GrimoireNode, NodeDataPoint } from '../GrimoireNode';
 import { GrimoireNodeType, NodeRarity } from '../types/nodeTypes';
+import { ElementType } from '../types/nodeTypes';
 
-export const SpellNode = ({ data }: { data: any }) => {
+interface SpellNodeData {
+  title: string;
+  rarity?: NodeRarity;
+  elementType: ElementType;
+  baseDamage: number;
+  range: number;
+  castTime: number;
+  manaCost: number;
+  multiTarget?: boolean;
+  statusEffect?: string;
+  secondaryElement?: ElementType;
+  description: string;
+}
+
+export const SpellNode = ({ data }: { data: SpellNodeData }) => {
   return (
     <div className="w-full relative">
       <GrimoireNode
@@ -39,7 +54,7 @@ export const SpellNode = ({ data }: { data: any }) => {
   );
 };
 
-export const SpellCastNode = ({ data }: { data: any }) => {
+export const SpellCastNode = ({ data }: { data: SpellNodeData }) => {
   // For default nodes that don't come from the palette
   if (!data.elementType) {
     return (
