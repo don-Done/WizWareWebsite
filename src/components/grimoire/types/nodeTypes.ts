@@ -4,7 +4,7 @@ export enum GrimoireNodeType {
   Effect = 'effectNode',
   Condition = 'conditionNode',
   Variable = 'variableNode',
-  Flow = 'flowNode'
+  Flow = 'flowNode',
   spell = 'spellnode'
 }
 
